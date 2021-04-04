@@ -6,12 +6,12 @@ import MenuButton from '../SideDrawer/MenuButton/MenuButton';
 
 const toolbar = (props) => (
     <header className={classes.Toolbar}>
-        <MenuButton clicked={props.opened}/>
+        <MenuButton clicked={props.opened} />
         <div className={classes.Logo}>
             <Logo />
         </div>
         <nav className={classes.DesktopOnly}>
-            <NavigationItems />
+            <NavigationItems isAuthenticated={props.isAuth} />
         </nav>
     </header>
 );
